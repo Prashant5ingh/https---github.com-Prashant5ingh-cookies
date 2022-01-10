@@ -1,0 +1,22 @@
+export interface Sensor {
+    id: number,
+    reading_time:string,
+    Device_Id:string,
+    Client:string,
+    Voltage_AN:string,
+    Voltage_BN:string,
+    Voltage_CN:string,
+    Voltage_Avg:string,
+    Frequency:string,
+    Current_A:string,
+    Current_B:string,
+    Current_C:string,
+    Current_Avg:string,
+    Active_Power:string,
+    Reactive_Power:string,
+    Apparent_Power:string,
+    Power_Factor:string,
+    KWH:string,
+    kVARh:string,
+    kVAh:string
+}

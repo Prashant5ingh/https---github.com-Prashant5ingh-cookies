@@ -1,0 +1,43 @@
+#am{
+    padding: 10px;
+    margin: 10px auto;
+    width:100px;
+    background-color: darkolivegreen;
+    color: white;
+    
+}
+.error{
+    color: #f44336;
+    font-size: 14px;
+  }
+.button{
+    margin:5px auto;
+    padding: 10px;
+    height: 8%;
+    width: 70%;
+    border-radius: 25px;
+    background-color: limegreen;
+    color: white;
+    justify-content: center;
+    border: none;
+    
+}
+
+.button:hover{ 
+    background-color: rgb(27 142 42);
+    cursor: pointer;
+} 
+.button:active {
+    transform: translateY(1px);
+}
+.button:focus{
+    
+    background-color: rgb(27 142 42);
+}
+
+
+fa-icon{
+    cursor: pointer;
+    
+
+}

@@ -1,0 +1,417 @@
+<app-dialogbox></app-dialogbox>
+<div class="row myrow">
+  <div class="col-sm-8">
+    <div class="row myrow">
+      <div class="col-sm-4">
+        <div class="card" style="height:70px;">
+          <div>
+            <div class="card-body"><br>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="card" style="height:70px;">
+          <div *ngFor="let mydata of data">
+            <h5>{{mydata.Frequency}}</h5>
+            <h6>Hz</h6>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="card" style="height:70px;">
+          <div *ngFor="let mydata of data">
+            <h5>{{mydata.Power_Factor}}</h5>
+            <h6>PF</h6>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="card" style="height:70px;" >
+          <div *ngFor="let mydata of data">
+            <h5>{{mydata.KWH}}</h5>
+            <h6>KWH</h6>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="card" style="height:70px;" >
+          <div *ngFor="let mydata of data">
+            <h5>{{mydata.kVARh}}</h5>
+            <h6>KVARH</h6>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="card" style="height:70px;" >
+          <div *ngFor="let mydata of data">
+            <h5>{{mydata.kVAh}}</h5>
+            <h6>KVAH</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="row myrow">
+      <div class="col-sm-12">
+        <div class="card" style="height:120px;margin-top: 18px;" >
+          <h5 class="card-title">Last Updated At: </h5>
+          <div class="card-body">
+            <div *ngFor="let mydata of data">
+              <h4 style="margin-top: -15px;">{{mydata.reading_time}}</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<hr>
+<div class="row myrow">
+  <div class="col-sm-3">
+    <div class="card">
+      <div>
+        <fa-icon class="icon" [icon]="faChartLine" (click)="graph_Voltage_avg()" data-toggle="modal" data-target="#exampleModal1">
+          <i class="far fa-chart-line"></i>
+        </fa-icon>
+        <h5 class="card-title">Voltage Avg</h5>
+        <div class="card-body" *ngFor="let mydata of data"><br>
+          <h3>{{mydata.Voltage_Avg}}</h3>
+          <h4>Volt</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="card">
+      <div>
+        <fa-icon class="icon" [icon]="faChartLine" (click)="graph_Voltage_phase1()" data-toggle="modal" data-target="#exampleModal2">
+          <i class="far fa-chart-line"></i>
+        </fa-icon>
+        <h5 class="card-title">Voltage Phase1</h5>
+        <div class="card-body" *ngFor="let mydata of data"><br>
+          <h3>{{mydata.Voltage_AN}}</h3>
+          <h4>Volt</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="card">
+      <div>
+        <fa-icon class="icon" [icon]="faChartLine" (click)="graph_Voltage_phase2()" data-toggle="modal" data-target="#exampleModal3">
+          <i class="far fa-chart-line"></i>
+        </fa-icon>
+        <h5 class="card-title">Voltage Phase2</h5>
+        <div class="card-body" *ngFor="let mydata of data"><br>
+          <h3>{{mydata.Voltage_BN}}</h3>
+          <h4>Volt</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="card">
+      <div>
+        <fa-icon class="icon" [icon]="faChartLine" (click)="graph_Voltage_phase3()" data-toggle="modal" data-target="#exampleModal4">
+          <i class="far fa-chart-line"></i>
+        </fa-icon>
+        <h5 class="card-title">Voltage Phase3</h5>
+        <div class="card-body" *ngFor="let mydata of data"><br>
+          <h3>{{mydata.Voltage_CN}}</h3>
+          <h4>Volt</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="card">
+      <div>
+        <fa-icon class="icon" [icon]="faChartLine" (click)="graph_Current_avg()" data-toggle="modal" data-target="#exampleModal5">
+          <i class="far fa-chart-line"></i>
+        </fa-icon>
+        <h5 class="card-title">Current Avg</h5>
+        <div class="card-body" *ngFor="let mydata of data"><br>
+          <h3>{{mydata.Current_Avg}}</h3>
+          <h4>Ampere</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="card">
+      <div>
+        <fa-icon class="icon" [icon]="faChartLine" (click)="graph_Current_phase1()" data-toggle="modal" data-target="#exampleModal6">
+          <i class="far fa-chart-line"></i>
+        </fa-icon>
+        <h5 class="card-title">Current Phase1</h5>
+        <div class="card-body" *ngFor="let mydata of data"><br>
+          <h3>{{mydata.Current_A}}</h3>
+          <h4>Ampere</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="card">
+      <div>
+        <fa-icon class="icon" [icon]="faChartLine" (click)="graph_Current_phase2()" data-toggle="modal" data-target="#exampleModal7">
+          <i class="far fa-chart-line"></i>
+        </fa-icon>
+        <h5 class="card-title">Current Phase2</h5>
+        <div class="card-body" *ngFor="let mydata of data"><br>
+          <h3>{{mydata.Current_B}}</h3>
+          <h4>Ampere</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- new add -->
+  <div class="col-sm-3">
+    <div class="card">
+      <div>
+        <fa-icon class="icon" [icon]="faChartLine" (click)="graph_Current_phase3()" data-toggle="modal" data-target="#exampleModal8">
+          <i class="far fa-chart-line"></i>
+        </fa-icon>
+        <h5 class="card-title">Current Phase3</h5>
+        <div class="card-body" *ngFor="let mydata of data"><br>
+          <h3>{{mydata.Current_C}}</h3>
+          <h4>Ampere</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="card">
+      <div>
+        <fa-icon class="icon" [icon]="faChartLine" (click)="graph_Activepower()" data-toggle="modal" data-target="#exampleModal9">
+          <i class="far fa-chart-line"></i>
+        </fa-icon>
+        <h5 class="card-title">Active Power</h5>
+        <div class="card-body" *ngFor="let mydata of data"><br>
+          <h3>{{mydata.Active_Power}}</h3>
+          <h4>KWH</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="card">
+      <div>
+        <fa-icon class="icon" [icon]="faChartLine" (click)="graph_Reactivepower()" data-toggle="modal" data-target="#exampleModal10">
+          <i class="far fa-chart-line"></i>
+        </fa-icon>
+        <h5 class="card-title">Reactive Power</h5>
+        <div class="card-body" *ngFor="let mydata of data"><br>
+          <h3>{{mydata.Reactive_Power}}</h3>
+          <h4>KVAH</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="card">
+      <div>
+        <fa-icon class="icon" [icon]="faChartLine" (click)="graph_Apparentpower()" data-toggle="modal" data-target="#exampleModal11">
+          <i class="far fa-chart-line"></i>
+        </fa-icon>
+        <h5 class="card-title">Apparent Power</h5>
+        <div class="card-body" *ngFor="let mydata of data"><br>
+          <h3>{{mydata.Apparent_Power}}</h3>
+          <h4>KVAH</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- add complete -->
+
+</div>
+
+<!-- Modal for Voltage Avg Graph -->
+<div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel1">Voltage Average Chart</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="chartContainer1" style="height: 250px; width:250px;">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for Voltage Pahse1 Graph -->
+<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel2">Voltage Phase1 Chart</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="chartContainer2" style="height: 250px; width:250px;">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for Voltage Phase2 Graph -->
+<div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel3"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel3">Voltage Phase2 Chart</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="chartContainer3" style="height: 250px; width:250px;">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for Voltage Phase3 Graph -->
+<div class="modal fade" id="exampleModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel4"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel4">Voltage Phase3 Chart</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="chartContainer4" style="height: 250px; width:250px;">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for Current Average Graph -->
+<div class="modal fade" id="exampleModal5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel5"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel5">Current Average Chart</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="chartContainer5" style="height: 250px; width:250px;">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for Current Phase1 Graph -->
+<div class="modal fade" id="exampleModal6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel6"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel6">Current Phase1 Chart</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="chartContainer6" style="height: 250px; width:250px;">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for Current Phase2 Graph -->
+<div class="modal fade" id="exampleModal7" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel7"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel7">Current Phase2 Chart</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="chartContainer7" style="height: 250px; width:250px;">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for Current Phase3 Graph -->
+<div class="modal fade" id="exampleModal8" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel8"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel8">Current Phase3 Chart</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="chartContainer8" style="height: 250px; width:250px;">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for Active Power Graph -->
+<div class="modal fade" id="exampleModal9" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel9"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel9">Active Power Chart</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="chartContainer9" style="height: 250px; width:250px;">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for Reactive Power Graph -->
+<div class="modal fade" id="exampleModal10" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel10"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel10">Reactive Power Chart</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="chartContainer10" style="height: 250px; width:250px;">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for Apparent Power Graph -->
+<div class="modal fade" id="exampleModal11" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel11"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel11">Apparent Power Chart</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="chartContainer11" style="height: 250px; width:250px;">
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,229 @@
+.form-container{
+  width: 28%;
+	float: right;
+  margin-right: 7%;
+	border-radius:2px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+  margin-top: -1%;
+  padding-top: 30px;
+  line-height: 8px;
+  margin-bottom: 2px;
+}
+.error{
+  color: #f44336;
+  font-size: 14px;
+  padding-top: 8px;
+}
+.col {
+  margin: 0 auto;
+  text-align: center;
+}
+.fa{
+  float: right;
+  margin-top: -20px;
+}
+.form{
+  padding: 1%;
+	border:1px solid black;
+	border-radius: 3px;
+  margin-top: 5%;
+  margin-bottom: 2%;
+  background-color: #cfebf6;
+}
+h2{
+  text-align: center;
+}
+.bottom-line{
+  text-align: center;
+}
+.imgr{
+  margin-top: 0%;
+  background-image: url("./../../assets/rimg.jpeg");
+  background-color: #cfebf6;
+  width: 100%;
+  height: 850px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+  legend{
+    color: black;
+    text-align: left;
+  }
+
+  span{
+    color:  rgb(21, 226, 21);
+  }
+  label{
+    display: block;
+	float: left;
+	margin-top: -19px;
+	background: #FFFFFF;
+	height: 17px;
+	padding: 2px 5px 2px 5px;
+	color: black;
+	font-size: 14px;
+	overflow: hidden;
+	font-family: Arial, Helvetica, sans-serif;
+  background-color: #cfebf6;
+  }
+input[type=Email], input[type=password], input[type=text], input[type=number]
+{
+  box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width: 100%;
+	display: block;
+	outline: none;
+	border:none;
+	height: 20px;
+  background-color: #cfebf6;
+	line-height: 20px;
+	font-size: 14px;
+	padding: 0;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+.form-check-label{
+  color: black;
+  padding-left: 20px;
+  padding-bottom: 10px;
+}
+.validation-div{
+  float: left;
+  margin-top: 20px;
+  height: fit-content;
+}
+.col{
+  line-height: normal;
+  height: auto;
+}
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 10px;
+}
+legend{
+  font-weight: bold;
+}
+
+button:hover {
+  opacity: 0.8;
+  color: white;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+  span.psw {
+    float: right;
+    padding-top: 16px;
+  }
+  .error1{
+    line-height: 16px;
+    font-size: 14px;
+  }
+
+  /* / Change styles for span and cancel button on extra small screens / */
+  @media screen and (max-width: 768px) {
+    .fa{
+      margin-top: -23px;
+      margin-right: 31px;
+    }
+    .validation-div{
+      margin-top: 20px;
+      margin-left: 40px;
+    }
+    .imgr{
+      background-image:
+    linear-gradient(to bottom, #8080801a, rgba(0,0,255,0.2));
+      background-size:cover;
+      height: 1000px;
+      width: 100%;
+    }
+    .form{
+      background-color: transparent;
+      border-radius: none;
+      padding: 0%;
+      width: none;
+      margin-left: 50px;
+      border: none;
+    }
+     .form-container{
+       width:100%;
+       border-radius: 2%;
+       margin-top: 2%;
+       background-color: none;
+       margin-bottom: 0px;
+     }
+     input[type=Email], input[type=password], input[type=text], input[type=number]
+{
+  width: 90%;
+  padding: 12px 20px;
+ margin-left: 5%;
+ margin-right: 5%;
+ border-radius: 5px;
+  border: 1px solid black;
+  display: block;
+  background-color: white;
+  box-sizing: none;
+  box-sizing: none;
+	-webkit-box-sizing:none;
+	-moz-box-sizing: none;
+	outline:none;
+	height: 3%;
+	line-height: 4px;
+	font-size: 25px;
+	padding: 0;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+     label{
+      display: block;
+	float: none;
+  margin-left: 5%;
+	margin-top: 1%;
+  margin-bottom: 1%;
+	background:none;
+	height: 14px;
+	padding: 2px;
+	color:black;
+	font-size: 14px;
+	overflow: hidden;
+	font-family: Arial, Helvetica, sans-serif;
+    }
+    .form-check-label{
+      color: black;
+      margin-left: 5%;
+    }
+    button {
+      color: white;
+      padding: 14px 20px;
+      margin-left: 25px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      border-radius: 10px;
+    } 
+    .error{
+      padding-left:10px;
+      padding-top: 8px;
+    }
+    h2{
+      font-weight: bolder;
+    }
+    label ,legend{
+      font-weight: bold;
+    }
+    .ch{
+      font-weight: bold;
+    }
+    .bottom-line{
+      font-weight: bold;
+    }
+    }
+   

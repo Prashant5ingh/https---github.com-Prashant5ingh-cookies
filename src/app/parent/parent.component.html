@@ -1,0 +1,45 @@
+
+<app-navbar></app-navbar>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-2">
+            <app-grid1></app-grid1>
+        </div>
+        <div class="col-sm-8">
+            <app-grid2></app-grid2>
+        </div>
+        <div class="col-sm-2">
+            <app-grid3></app-grid3>
+        </div>
+    </div>
+</div>
+
+
+<div [style.display]="showModal1 ? 'block' : 'none'" class="modal" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+    <div class="modal-dialog"  role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel">meter registration required</h4>
+      </div>
+      <div class="modal-body">
+        <button type="button" class="btn btn-dark" data-dismiss="modal" (click) = "hide1()">OK</button>    
+    </div>
+      
+    </div>
+    </div>
+</div>
+<div [style.display]="showModal2 ? 'block' : 'none'" class="modal" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+    <div class="modal-dialog"  role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel">select a meter</h4>
+      </div>
+      <div class="modal-body">
+        <button type="button" class="btn btn-dark" data-dismiss="modal" (click) = "hide2()">OK</button>    
+    </div>
+      
+    </div>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+nav{
+    background-color: rgb(35, 156, 90);
+}
+.nav-item, h5{
+    margin:auto 0px;
+    padding-right:5px;
+}
+.companyName2{
+  margin-left: 10px;  
+}
+.nav-link{
+color: white;
+}
